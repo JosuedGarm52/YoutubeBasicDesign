@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.mybasicex.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_fg_recycler_ex"
+            app:destination="@id/fg_recycler_ex" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.mybasicex.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_fg_recycler_ex"
+            app:destination="@id/fg_recycler_ex" />
+    </fragment>
+    <fragment
+        android:id="@+id/fg_recycler_ex"
+        android:name="com.example.mybasicex.ClFgRecyclerEx"
+        android:label="FgRecyclerEx"
+        tools:layout="@layout/fg_recycler_ex"
+        >
+        <action
+            android:id="@+id/action_fg_recycler_ex_to_fg_form_ex"
+            app:destination="@id/fg_form_ex" />
+    </fragment>
+    <fragment
+        android:id="@+id/fg_form_ex"
+        android:name="com.example.mybasicex.ClFgFormEX"
+        android:label="FgFormEx"
+        tools:layout="@layout/fg_form_ex"
+        >
+        <action
+            android:id="@+id/action_fg_form_ex_to_fg_recycler_ex"
+            app:destination="@id/fg_recycler_ex" />
+    </fragment>
+</navigation>
