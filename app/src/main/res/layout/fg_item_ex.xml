@@ -15,6 +15,7 @@
         android:layout_marginEnd="200dp"
         android:text="TextView"
         app:layout_constraintEnd_toStartOf="@+id/tvItem1"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

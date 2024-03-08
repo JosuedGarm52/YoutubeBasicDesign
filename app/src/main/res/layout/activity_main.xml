@@ -27,11 +27,12 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/buttomNavigationView"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/buttom_nav"/>
+        android:layout_gravity="bottom"
+        app:menu="@menu/buttom_nav" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

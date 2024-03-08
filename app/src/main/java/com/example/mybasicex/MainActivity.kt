@@ -61,7 +61,6 @@ class MainActivity : AppCompatActivity() {
             when (currentDestinationId) {
                 R.id.FirstFragment -> {
                     findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.action_FirstFragment_to_fg_recycler_ex)
-
                 }
                 R.id.SecondFragment -> {
                     findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.action_SecondFragment_to_fg_recycler_ex)
@@ -105,6 +104,12 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.transmitir -> {
                 Toast.makeText(this, "Pulsaste en el boton de notificacion", Toast.LENGTH_LONG).show()
+                //Snackbar.make(view, "Pulsa otro boton", Snackbar.LENGTH_LONG)
+                //                        .setAction("Action", null).show()
+                return true
+            }
+            R.id.Config -> {
+                Toast.makeText(this, "Pulsaste Config", Toast.LENGTH_LONG).show()
                 return true
             }
             else -> super.onOptionsItemSelected(item)
