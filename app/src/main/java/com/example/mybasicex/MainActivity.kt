@@ -40,7 +40,11 @@ class MainActivity : AppCompatActivity() {
         binding.buttomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.plus -> {
-                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.action_fg_recycler_ex_to_fg_form_ex)
+                    val currentDestinationId = findNavController(R.id.nav_host_fragment_content_main).currentDestination?.id
+                    when (currentDestinationId) {
+                        R.id.fg_recycler_ex -> findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.action_fg_recycler_ex_to_fg_form_ex)
+                        else -> Toast.makeText(this, "Pulsa un boton de accion", Toast.LENGTH_LONG).show()
+                    }
 
                 }
                 R.id.shortt -> Toast.makeText(this, "Pulsaste Shorts", Toast.LENGTH_LONG).show()
