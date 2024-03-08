@@ -23,7 +23,7 @@
         android:layout_width="168dp"
         android:layout_height="52dp"
         android:layout_marginStart="91dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="110dp"
         android:ems="10"
         android:hint="TITULO"
@@ -42,34 +42,34 @@
         android:layout_marginStart="91dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="110dp"
-        android:ems="10"
-        android:minHeight="48dp"
-        android:text="Tu"
         android:clickable="true"
+        android:ems="10"
         android:focusable="false"
         android:inputType="none"
+        android:minHeight="48dp"
+        android:text="Tu"
         android:textIsSelectable="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/btnSig"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
+        android:layout_width="76dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="18dp"
         android:layout_marginEnd="52dp"
         android:background="@color/red"
         android:backgroundTint="@color/red"
         android:text="Subir"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/radioGroup"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chkPublico"
-        app:layout_constraintVertical_bias="0.137" />
+        app:layout_constraintVertical_bias="0.141" />
 
     <TextView
         android:id="@+id/textView2"
@@ -95,7 +95,7 @@
         android:text="Nombre del canal:"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -123,6 +123,7 @@
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:text="2.00"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -204,5 +205,19 @@
         app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/btnBorrar"
+        android:layout_width="86dp"
+        android:layout_height="61dp"
+        android:text="Borra"
+        android:textColor="@color/white"
+        android:background="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkPublico"
+        app:layout_constraintVertical_bias="0.089" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
