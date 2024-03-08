@@ -1,15 +1,20 @@
 package com.example.mybasicex
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
+import android.util.TypedValue
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
 import com.example.mybasicex.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,15 +29,31 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
+        //Asignar titulo a la aplicacion
+        //supportActionBar?.title = "Youtube"
+
+
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        binding.buttomNavigationView.setOnItemSelectedListener {
+            when(it.itemId){
+                R.id.plus -> {
+                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.action_fg_recycler_ex_to_fg_form_ex)
+
+                }
+                R.id.shortt -> Toast.makeText(this, "Pulsaste Shorts", Toast.LENGTH_LONG).show()
+                R.id.suscripcion -> Toast.makeText(this, "Pulsaste Suscripcion", Toast.LENGTH_LONG).show()
+                R.id.tu -> Toast.makeText(this, "Pulsaste Tu", Toast.LENGTH_LONG).show()
+                else -> {
+                    Toast.makeText(this, "Pulsa otro boton", Toast.LENGTH_LONG).show()
+                }
+            }
+            true
         }
 
+        /*
         binding.btnEnviar.setOnClickListener { view ->
             val currentDestinationId = findNavController(R.id.nav_host_fragment_content_main).currentDestination?.id
 
@@ -59,12 +80,13 @@ class MainActivity : AppCompatActivity() {
                         .setAction("Action", null).show()
                 }
             }
-        }
+        }*/
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
+        menuInflater.inflate(R.menu.custom_bar, menu)
         return true
     }
 
@@ -73,7 +95,18 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.Search -> {
+                Toast.makeText(this, "Pulsaste en el boton buscar", Toast.LENGTH_LONG).show()
+                return true
+            }
+            R.id.notification -> {
+                Toast.makeText(this, "Pulsaste en el boton de notificacion", Toast.LENGTH_LONG).show()
+                return true
+            }
+            R.id.transmitir -> {
+                Toast.makeText(this, "Pulsaste en el boton de notificacion", Toast.LENGTH_LONG).show()
+                return true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
