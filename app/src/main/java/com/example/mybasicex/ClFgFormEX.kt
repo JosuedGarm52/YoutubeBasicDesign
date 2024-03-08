@@ -33,7 +33,8 @@ class ClFgFormEX : Fragment() {
 
 
         binding.btnSig.setOnClickListener{
-            val ejemplo1 = binding.edtText1.text.toString()
+            /*
+            val ejemplo1 = binding.edt.text.toString()
             val ejemplo2 = binding.edtText2.text.toString()
 
             val Ejempliplo = ejemplo(ejemplo1, ejemplo2)
@@ -41,7 +42,7 @@ class ClFgFormEX : Fragment() {
             Singleton.singEjemplo.add(Ejempliplo)
             Snackbar.make(view, "Dato Agregado", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
-            findNavController().navigate(R.id.action_fg_form_ex_to_fg_recycler_ex)
+            findNavController().navigate(R.id.action_fg_form_ex_to_fg_recycler_ex)*/
         }
 
     }

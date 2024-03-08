@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class AdapterEjemplo(val xyz: (ejemplo) -> Unit) : RecyclerView.Adapter<AdapterEjemplo.ViewHolder>() {
     class ViewHolder(item_ejemplo: View, val xyz: (ejemplo) -> Unit) : RecyclerView.ViewHolder(item_ejemplo) {
-        val tvItem1 = item_ejemplo.findViewById<TextView>(R.id.tvItem1)
-        val tvItem2 = item_ejemplo.findViewById<TextView>(R.id.tvItem2)
+        val tvItem1 = item_ejemplo.findViewById<TextView>(R.id.tvCanal)
+        val tvItem2 = item_ejemplo.findViewById<TextView>(R.id.tvTitulo)
 
         fun bind(KEjemplo: ejemplo){
             tvItem1.text = KEjemplo.ejemplo1
