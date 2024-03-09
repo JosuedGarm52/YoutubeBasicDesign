@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="115dp"
+        android:text="Sube un video"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtTitulo"
+        android:layout_width="168dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="21dp"
+        android:ems="10"
+        android:hint="TITULO"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="Titulo"
+        app:layout_constraintEnd_toStartOf="@+id/edtCanal"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtCanal"
+        android:layout_width="181dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="33dp"
+        android:clickable="true"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="none"
+        android:minHeight="48dp"
+        android:text="Tu"
+        android:textIsSelectable="false"
+        app:layout_constraintStart_toEndOf="@+id/edtTitulo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSig"
+        android:layout_width="86dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/red"
+        android:backgroundTint="@color/red"
+        android:text="Subir"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/edtDuracion"
+        android:layout_width="231dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="108dp"
+        android:ems="10"
+        android:hint="Duracion"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text="2.00"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/edtDate"
+        app:layout_constraintTop_toBottomOf="@+id/edtCanal" />
+
+    <CheckBox
+        android:id="@+id/chkPublico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="172dp"
+        android:minHeight="48dp"
+        android:text="Apto para todo publico?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtDate"
+        app:layout_constraintVertical_bias="0.089999974"
+        tools:ignore="MissingConstraints" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="138dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rdbPrivado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Privado" />
+
+        <RadioButton
+            android:id="@+id/rdbOculto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Oculto" />
+
+        <RadioButton
+            android:id="@+id/rdbPublico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:minHeight="48dp"
+            android:text="Publico" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edtDate"
+        android:layout_width="183dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Fecha"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:text="01/01/2024"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTitulo" />
+
+    <Button
+        android:id="@+id/btnBorrar"
+        android:layout_width="86dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="119dp"
+        android:background="@color/red"
+        android:text="Borra"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSig" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
