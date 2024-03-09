@@ -14,7 +14,7 @@
         android:layout_marginTop="1dp"
         android:text="Titulo Predeterminado"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imvMiniatura"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -24,11 +24,11 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="4dp"
         android:text="Canal name"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imvMiniatura"
         app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imvMiniatura"
         android:layout_width="69dp"
         android:layout_height="71dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,7 +43,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="4dp"
         android:text="01/02/2024"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imvMiniatura"
         app:layout_constraintTop_toBottomOf="@+id/tvCanal" />
 
     <TextView

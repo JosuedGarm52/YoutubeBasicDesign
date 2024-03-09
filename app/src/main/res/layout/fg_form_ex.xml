@@ -56,9 +56,9 @@
 
     <Button
         android:id="@+id/btnSig"
-        android:layout_width="76dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="18dp"
+        android:layout_width="86dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="10dp"
         android:layout_marginEnd="52dp"
         android:background="@color/red"
         android:backgroundTint="@color/red"
@@ -114,7 +114,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/edtDuracion"
         android:layout_width="231dp"
         android:layout_height="43dp"
         android:layout_marginTop="20dp"
@@ -192,7 +192,7 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/edtDate"
         android:layout_width="183dp"
         android:layout_height="49dp"
         android:layout_marginTop="16dp"
@@ -210,14 +210,14 @@
         android:id="@+id/btnBorrar"
         android:layout_width="86dp"
         android:layout_height="61dp"
+        android:background="@color/red"
         android:text="Borra"
         android:textColor="@color/white"
-        android:background="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chkPublico"
-        app:layout_constraintVertical_bias="0.089" />
+        app:layout_constraintVertical_bias="0.038" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

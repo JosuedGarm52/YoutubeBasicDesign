@@ -50,5 +50,8 @@
         <action
             android:id="@+id/action_fg_form_ex_to_fg_recycler_ex"
             app:destination="@id/fg_recycler_ex" />
+        <argument
+            android:name="Titulo"
+            android:defaultValue="nulo" />
     </fragment>
 </navigation>
